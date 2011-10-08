@@ -1,0 +1,105 @@
+.entry .card { margin-left:auto; margin-right:auto;margin-top:10px;table-layout:fixed;width:100%;border-spacing:0;border-collapse:collapse;border:0}
+.entry .card .c{background-color:#fff;background-repeat:no-repeat;border:0;padding:0}
+.entry .card .ctl,.entry .card .cl,.entry .card .cbl,.entry .card .ctr,.entry .card .cr,.entry .card .cbr,.entry .card .cal,.entry .card .car,.entry .card .caal,.entry .card .caar{width:15px}
+.entry .card .ctl,.entry .card .ct,.entry .card .ctr{height:13px}
+.entry .card .cbl,.entry .card .cb,.entry .card .cbr{height:12px}
+.entry .card .ctl,.entry .card .ctr,.entry .card .cbl,.entry .card .cbr{background-image:url("../images/card-corners.gif")}
+.entry .card .cr,.entry .card .cl,.entry .card .cal,.entry .card .car,.entry .card .caal,.entry .card .caar{background-image:url("../images/card-lr.gif");background-repeat:repeat-y}
+.entry .card .ct,.entry .card .cb,.entry .card .blue-action-area .cb{background-image:url("../images/card-tb.gif");background-repeat:repeat-x}
+.entry .card .ctl{background-position:0 0}
+.entry .card .ctr{background-position:-16px 0}
+.entry .card .cbl{background-position:0 100%}
+.entry .card .cbr{background-position:-16px 100%}
+.entry .card .cl,.entry .card .cal,.entry .card .caal{background-position:0 0}
+.entry .card .cr,.entry .card .car,.entry .card .caar{background-position:-16px 0}
+.entry .card .ct{background-position:0 0}
+.entry .card .cb{background-position:0 -14px}
+.entry .card .card-bottomrow{font-size:0;line-height:0}
+.entry .card .cal,.entry .card .car{background-color:#eee}
+.entry .card .ca{background-color:#eee}
+.action-area{background-color:#c3d9ff;padding:4px 4px}
+.entry .card .caa,.entry .card .caal,.entry .card .caar{background-color:#c3d9ff}
+.entry .card .blue-action-area .cbl{background-position:-32px 100%}
+.entry .card .blue-action-area .cbr{background-position:-48px 100%}
+.entry .card .blue-action-area .cb{background-position:0 -41px}
+.read .card .ctl{background-position:-128px 0}
+.read .card .ctr{background-position:-144px 0}
+.read .card .cbl{background-position:-128px 100%}
+.read .card .cbr{background-position:-144px 100%}
+.read .card .cl,.read .card .cal{background-position:-64px 0}
+.read .card .cr,.read .card .car{background-position:-80px 0}
+.read .card .ct{background-position:0 -108px}
+.read .card .cb{background-position:0 -122px}
+.read .card .blue-action-area .cbl{background-position:-160px 100%}
+.read .card .blue-action-area .cbr{background-position:-176px 100%}
+.read .card .blue-action-area .cb{background-position:0 -149px}
+.entry-main {
+	padding:5px;
+}
+
+
+.headline{ 
+	color: #005DA9;
+	font-size: 15pt;
+
+	font-weight: bold;
+	text-decoration: underline;
+	margin-bottom:5px;
+}
+
+.headline .cent
+{
+	text-align: center;	
+}
+
+
+.viceheadline{ 
+	font-weight: bold;
+	text-align: center;
+}
+
+.description {
+	font-family: Arial;
+	font-size: 12pt;
+	line-height: 15pt; 
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.description ol{
+	margin-left: 25px;
+}
+
+.rtbar {
+	float: right;
+	font-size: 12pt;
+	font-weight: bold;
+	margin-top: 5px;
+}
+pre {
+	font-family: "Courier New", monospace;
+	font-size: 12pt;
+	line-height: 15pt;
+	overflow: auto;
+	border: solid 1px;
+	margin-left: 10px;
+}
+
+#container {
+	width:100%;
+	background-color:#fff;
+	background-image:url("../images/bg2.gif")
+}
+
+#info_board {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	text-align: left;
+}
+
+.alignright {
+	text-align: right;
+}

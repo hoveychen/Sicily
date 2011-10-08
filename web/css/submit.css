@@ -1,0 +1,22 @@
+#center_container {
+	top: 0px;
+	position: absolute;
+	left: 50%;
+	top: 450px;
+}
+
+#judge_info {
+    font-size: 20px;
+}
+
+#status_info {
+    font-size: 30px;
+}
+
+.Accepted {
+    color: green;
+}
+
+.Wrong {
+    color: red;
+}

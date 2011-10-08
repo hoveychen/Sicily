@@ -1,0 +1,7 @@
+host		= localhost
+#user		= user
+#password	= passwd
+#database	= sicily
+data-dir	= /home/testdata
+source-dir	= /home/source
+#judge-id	= 0

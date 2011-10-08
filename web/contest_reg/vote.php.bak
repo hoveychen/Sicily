@@ -1,0 +1,99 @@
+<?
+  require("include/db.php");
+  require_once("include/global.php");
+  session_start();
+  if (isset($_GET['cid']) && is_numeric($_GET['cid']))
+  	$contest['cid'] = (int)$_GET['cid'];
+  if ($contest == NULL) die("No contest available!");
+  $page = $_GET["page"];
+  $cid = $_GET["cid"];
+  $type = "zsucpc";
+  $user_id = $HTTP_COOKIE_VARS["ex_user_id"];
+  if (isset($user_id)) {
+//    $result = mysql_query("SELECT count(*) FROM user WHERE id='$user_id' AND perm LIKE '%admin%'");
+//    $row = mysql_fetch_row($result);
+//    if ($user_id == 10)
+//    $admin = 1;
+	$admin = 0;
+  }
+  $team_table = "team_test";
+  $sql = "INSERT INTO vote (tid, score) ".
+         "(SELECT $team_table.tid, 0 FROM $team_table WHERE NOT EXISTS ".
+	 "(SELECT * FROM vote WHERE vote.tid = $team_table.tid))";
+  if (!mysql_query($sql)) die("An Error was encountered, please contact the administrators");
+  if (isset($_GET['vote_tid']) && is_numeric($_GET['vote_tid'])) {
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $sql = "SELECT * FROM vote_record WHERE last_time >= CURDATE() AND ip = '$ip'";
+    $result = mysql_query($sql);
+    if (mysql_num_rows($result)) {
+      echo "alert('..ip...............');";
+    } else {
+      echo "alert('');";
+      $vote_tid = $_GET['vote_tid'];
+      $sql = "UPDATE vote SET score = score + 1 WHERE tid = $vote_tid";
+      if (!mysql_query($sql)) die("1 An Error was encountered, please contact the administrators");
+      $sql = "DELETE FROM vote_record WHERE ip = '$ip'";
+      if (!mysql_query($sql)) die("2 An Error was encountered, please contact the administrators");
+      $sql = "INSERT INTO vote_record (ip, last_time) values('$ip', CURDATE())";
+      if (!mysql_query($sql)) die("3 An Error was encountered, please contact the administrators");
+    }
+  }
+?>
+<html>
+<head>
+<title>Status</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link rel="stylesheet" href="style.css">
+</head>
+<body color="#FFFFFF" bgcolor="#005DA9" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td>
+	<?
+	  require("navigation.php");
+	?>
+    </td>
+   <!-- <td background="images/navigation_bg.gif">&nbsp;</td>-->
+  </tr>
+  <tr valign="top"> 
+    <td height="440" align="center" background="../zsucpc2006/images/bg2.gif">
+	  <br>
+      <table width="80%"  border="0" cellpadding="4" cellspacing="1">
+        <tr align="center" bgcolor="#0071BD" class="white"> 
+          <td width="200"><b>Team ID</b></td>
+          <td><b>Team Name</b></td>
+	  <td width="200"><b>Scores</b></td>
+	  <td width="200"><b>Vote</b></td>
+	  <? if (checkAdmin()) { ?>
+	    <td><b>Edit</b></td>
+	  <? } ?>
+        </tr>
+	<?
+	$sql = "SELECT T.cid, T.tid, T.enname, T.cnname, T.status, V.score FROM team_test AS T, vote AS V ".
+	       "WHERE T.cid = {$contest['cid']} AND T.status = 1 AND T.tid = V.tid ".
+	       "ORDER BY V.score DESC";
+	$result = mysql_query($sql);
+	for ($i = 1; $i <= mysql_num_rows($result); $i++) {
+	  $row = mysql_fetch_array($result);
+	  $tid = $row["tid"];
+	  $name = $row["enname"]."(".$row["cnname"].")";
+	  $score = $row["score"];
+	  if ($i % 2 == 0) echo "<tr bgcolor=\"#FCFCFC\">"; else echo "<tr bgcolor=\"#EEEEEE\">";
+	?>
+	    <td><?=$i?></td>
+	    <td><?=$name?></td>
+	    <td><?=$score?></td>
+	    <td><a href="vote.php?vote_tid=<?=$tid?>">vote</a></td>
+	  </tr>
+	<?
+	}
+	?>
+      </table>
+      </td>
+  </tr>
+  <?
+  require("footer.php");
+?>
+</table>
+</body>
+</html>

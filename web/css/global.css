@@ -1,0 +1,402 @@
+html { overflow: scroll; }
+
+.white { color: #FFFFFF }
+
+.blue, .blue_anchor a, .blue_anchor a:hover  { color: #0000FF}
+
+.black, .black a, .black a:hover { color: #000000 }
+
+.text { font-family: Arial;
+        font-size: 12pt;
+        line-height: 15pt
+}
+
+caption {
+    color: #0000FF;
+    font-size: large;
+}
+
+.hidden {
+    display: none;
+}
+
+.place_left {
+    text-align: left;
+}
+
+.place_center {
+    text-align: center;
+
+}
+
+#logo {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 450px;
+    background-image: url(../images/bg2.gif);
+    text-align: center;
+}
+
+#logo #container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 638px;
+}
+
+#logo #container #version {
+    position: absolute;
+    right: 30px;
+    top: 150px;
+    font-size: 30pt;
+    color: rgb(255,0,0);
+}
+
+#footer {
+    text-align: center;
+    font-size: 11px;
+    color: grey;
+}
+
+.background_container {
+    text-align: center; 
+    /*padding-top: 30px; */
+    /*padding-bottom: 30px;*/
+}
+
+.sub_container {
+    border-style: solid;
+    border-width: 3px;
+    border-color: #0071BD;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 960px;
+    -moz-border-radius:5px;
+    -moz-box-shadow:1px 1px #E3E5EB;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+
+h1 {
+    color: #005DA9;
+    font-size: 12pt;
+    line-height: 15pt;	
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+body {
+    font-family: Verdana;
+    font-size: 12px;
+    color: #333333;
+    margin: 0;
+    text-align: center;
+
+    background-image: url(../images/bg2b.gif);
+}
+
+table, td, tr {
+    font-family: Verdana;
+    font-size: 9pt
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {  text-decoration: underline; }
+
+input, textarea
+{
+    font-family: Verdana;
+    font-size: 9pt;
+    color: #333333;
+    border:1 solid #333333;
+}
+
+input.radio
+{
+    border:0
+}
+
+img
+{
+    border:0;
+    vertical-align: middle;
+}
+
+.tblcontainer td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.tblcontainer thead tr{
+    height: 25px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.tblcontainer thead tr a{
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.tblcontainer tbody tr:nth-child(odd),.advtable_fix tbody tr:nth-child(odd) {
+    background: #F0F0F0;
+    height: 25px;
+}
+
+.tblcontainer tbody tr:nth-child(even),.advtable_fix tbody tr:nth-child(even) {
+    background: #E6E6E6;
+    height: 25px;
+}
+
+.tr_odd  {
+    background: #F0F0F0;
+    height: 25px;
+}
+
+.tr_even {
+    background: #E6E6E6;
+    height: 25px;
+}
+
+.topmenu{
+    height:40px;
+    font-size:12px;
+    background:url(../images/topmenu_bg.gif) left top repeat-x;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.topmenu ul{
+    padding:0px 0px;
+    height:40px;
+    margin:0px 0px;
+    list-style:none;
+}
+.topmenu ul li{
+    float:left;
+    margin-left:2px;
+    text-align:center;
+    background:url(../images/topmenu_bg.gif) left bottom no-repeat;
+}
+
+
+.topmenu ul li a{
+    float:left;
+    color:#FFFFFF;
+    display:block;
+    padding-left:12px;
+    padding-right:10px;
+    text-decoration:none;
+    height:40px;
+    line-height:37px;
+}
+.topmenu ul li a:hover{
+    color:#FFFF99;
+    background:url(../images/topmenu_o.gif) center bottom no-repeat;
+}
+.topmenu ul li a.thisclass{
+    color:#FFFF99;
+    background:url(../images/topmenu_o.gif) center bottom no-repeat;
+}
+.topmenu .rssbut{
+    color:white;
+    position:relative;
+    float:right;
+    display:inline;
+    margin:-32px 11px 0px 0px;
+}
+
+.topmenu .rssbut a{
+    text-decoration:none;
+    color:#FFFFFF;
+}
+
+.main_frame {
+    text-align: left;
+    margin: auto;
+    width: 960px;
+    background-color: #FFFFFF;
+    padding: 5px;
+
+}
+
+#loginbox {
+    /*width: 400px;*/
+    float: right;
+
+    text-align: right;
+}
+
+#loginbox input {
+    vertical-align: middle;
+
+}
+
+#sicily_logo #msg {
+    color: white;
+    display: none;
+    background-color: red;
+    right: 300px;
+    padding: 10px;
+    font-weight: bold;
+    position: absolute;
+}
+
+#topbar {
+    position:absolute;
+    left:140px;
+    top: -53px;
+}
+
+#loginbox a {
+    color: blue;
+}
+
+
+#contest_title {
+    font-size: 30px;
+    color: blue;
+    font-weight: bold;
+}
+
+#contest_info {
+    font-size: 20px;
+    color: red;
+}
+
+form {
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+
+#sicily_logo {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 2px;
+
+    min-height: 50px;
+    height:auto !important; 
+    height:50px; 
+    overflow:visible;
+
+    background: url(../images/banner_logo.jpg) no-repeat bottom left;
+}
+
+#banner_version {
+    position: relative;
+    margin-left: 150px;
+    font-size: 14px;
+    color: red;
+}
+
+.vol_navigate {
+    vertical-align: middle;	
+    text-align: right;
+    font-size: 14px;
+    background-color: #EEEEFF;
+    margin-bottom: 1px;
+    padding: 10px;
+}
+
+.vol_navigate img {
+    vertical-align: middle;	
+}
+
+.vol_navigate a {
+    text-align: right;
+    font-size: 14px;
+    color: blue;
+    text-decoration:none;
+    background-color: #F0F0F0;
+}
+
+.vol_navigate a:hover {
+    background-color: #E6E6F0;
+
+}
+
+#error_msg {
+    color: red;
+    font-size:18px;
+    text-align:center;
+}
+
+.passage p {
+    text-indent: 2em;
+}
+
+.clarify {
+    color: red;
+}
+
+.strkeout {
+    text-decoration: line-through;
+}
+
+.links
+{
+    cursor:pointer;
+}
+
+.clear
+{
+    clear:both;
+}
+
+.nickname {
+    font-size: 20px;
+    margin-left: 5px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.userid {
+    color: gray;
+}
+
+#signature {
+
+}
+
+#signature .isfocus{
+    border: 2px inset;    
+    background-color: aqua;   
+}
+
+.login_button {
+    background: url('../images/m_login.gif'); 
+    width: 48px; 
+    height: 46px; 
+    border: none; 
+}
+
+#contestClock {
+    font-size: x-large;
+    color: red;
+}
+
+#searchbox {
+}
+
+.search_bar {
+    padding: 3px 5px;
+    font-size: 12px;
+    vertical-align: middle;
+    width: 200px;
+}
+
+.input_hint {
+    color: gray;
+}
+
+#search_user_form {
+    text-align: right;
+}
+
+pre{
+    overflow: auto;
+}

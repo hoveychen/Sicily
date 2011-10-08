@@ -1,0 +1,137 @@
+/* 
+    Document   : project_hord
+    Created on : 2011-7-3, 16:51:16
+    Author     : hovey
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.hord_button {
+    vertical-align: middle;
+    display:inline-block;
+    margin: 3px 5px;
+    padding: 5px 10px; 
+    background-color: whiteSmoke;
+    background-image: linear-gradient(top,whiteSmoke,#F1F1F1);
+    background-image: -webkit-linear-gradient(top,whiteSmoke,#F1F1F1);
+    background-image: -moz-linear-gradient(top,whiteSmoke,#F1F1F1);
+    background-image: -ms-linear-gradient(top,whiteSmoke,#F1F1F1);
+    background-image: -o-linear-gradient(top,whiteSmoke,#F1F1F1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 11px;
+    color: #666;
+    cursor: pointer;
+    overflow: auto;
+    
+    /* hot fix for ie7 */
+    zoom:1;
+    *display:inline;
+}
+
+.hord_button:hover {
+    background-image: url("");
+    background-color: #F8F8F8;
+    color: #333;
+    border: 1px solid #C6C6C6;
+}
+
+.hord_theme_blue {
+    color: white;
+    border: 1px solid cornflowerblue;
+    background-color: cornflowerblue;
+    background-image: linear-gradient(top,lightblue,cornflowerblue);
+    background-image: -webkit-linear-gradient(top,lightblue,cornflowerblue);
+    background-image: -moz-linear-gradient(top,lightblue,cornflowerblue);
+    background-image: -ms-linear-gradient(top,lightblue,cornflowerblue);
+    background-image: -o-linear-gradient(top,lightblue,cornflowerblue);    
+}
+
+.hord_theme_blue:hover {
+    color: white;
+    border: 1px solid cornflowerblue;
+    background-color: cornflowerblue;
+    background-image: linear-gradient(top,cornflowerblue,cornflowerblue);
+    background-image: -webkit-linear-gradient(top,cornflowerblue,cornflowerblue);
+    background-image: -moz-linear-gradient(top,cornflowerblue,cornflowerblue);
+    background-image: -ms-linear-gradient(top,cornflowerblue,cornflowerblue);
+    background-image: -o-linear-gradient(top,cornflowerblue,cornflowerblue);    
+}
+
+.hord_theme_green {
+    color: white;
+    border: 1px solid forestgreen;
+    background-color: forestgreen;
+    background-image: linear-gradient(top,limegreen,forestgreen);
+    background-image: -webkit-linear-gradient(top,limegreen,forestgreen);
+    background-image: -moz-linear-gradient(top,limegreen,forestgreen);
+    background-image: -ms-linear-gradient(top,limegreen,forestgreen);
+    background-image: -o-linear-gradient(top,limegreen,forestgreen);    
+}
+
+.hord_theme_green:hover {
+    color: white;
+    border: 1px solid forestgreen;
+    background-color: forestgreen;
+    background-image: linear-gradient(top,forestgreen,forestgreen);
+    background-image: -webkit-linear-gradient(top,forestgreen,forestgreen);
+    background-image: -moz-linear-gradient(top,forestgreen,forestgreen);
+    background-image: -ms-linear-gradient(top,forestgreen,forestgreen);
+    background-image: -o-linear-gradient(top,forestgreen,forestgreen);    
+}
+
+.hord_theme_red {
+    color: white;
+    border: 1px solid firebrick;
+    background-color: firebrick;
+    background-image: linear-gradient(top,tomato,firebrick);
+    background-image: -webkit-linear-gradient(top,tomato,firebrick);
+    background-image: -moz-linear-gradient(top,tomato,firebrick);
+    background-image: -ms-linear-gradient(top,tomato,firebrick);
+    background-image: -o-linear-gradient(top,tomato,firebrick);    
+}
+
+.hord_theme_red:hover {
+    color: white;
+    border: 1px solid firebrick;
+    background-color: firebrick;
+    background-image: linear-gradient(top,firebrick,firebrick);
+    background-image: -webkit-linear-gradient(top,firebrick,firebrick);
+    background-image: -moz-linear-gradient(top,firebrick,firebrick);
+    background-image: -ms-linear-gradient(top,firebrick,firebrick);
+    background-image: -o-linear-gradient(top,firebrick,firebrick);    
+}
+
+.hord_link {
+    color: #005DA9;
+}
+
+.hord_link:hover {
+    color: #005DA9;
+}
+
+.hord_list {
+    list-style-type: none;
+    padding-left: 20px;
+    line-height: 20px;
+
+}
+
+.hord_list_selected {
+
+}
+
+.hord_dt {
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.hord_dd {
+    margin-left: 10px;
+}

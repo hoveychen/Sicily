@@ -1,0 +1,1086 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Informatic Lab in Sun Yat-sen University
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-07-09 10:14+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: problem_list.php:93 cproblem_list.php:43 status.php:12 submit.php:14
+#: contest_detail.php:48 problem_list.php:95 contest_detail.php:53
+#: submit.php:13 problem_tab.php:80 contest_detail.php:53
+msgid "Accepted"
+msgstr "通过"
+
+#: show_problem.php:144 show_problem.php:151 show_problem.php:137
+msgid "Accepted:"
+msgstr "通过数量："
+
+#: navigation.php:176 navigation.php:177 navigation.php:185 navigation.php:189
+#: navigation.php:181 navigation.php:183 navigation.php:184
+msgid "All Status"
+msgstr "所有提交状态"
+
+#: footer.php:10 footer.php:11 footer.php:11
+msgid "All rights reserved by Informatic Lab, Sun Yat-sen University"
+msgstr "中山大学信息学实验室保留所有权利"
+
+#: navigation.php:168 navigation.php:184 navigation.php:169 navigation.php:185
+#: navigation.php:177 navigation.php:193 navigation.php:181 navigation.php:197
+#: navigation.php:173 navigation.php:189 navigation.php:175 navigation.php:191
+#: navigation.php:192 navigation.php:177 navigation.php:196
+msgid "Contests"
+msgstr "比赛"
+
+#: show_problem.php:213 show_problem.php:220 show_problem.php:206
+msgid "Copy sample input to clipboard"
+msgstr "将样例输入复制到剪贴板"
+
+#: show_problem.php:202 show_problem.php:207 show_problem.php:193
+#: problem.php:75
+msgid "Description"
+msgstr "题目描述"
+
+#: navigation.php:179 navigation.php:180 navigation.php:188 navigation.php:192
+#: navigation.php:184 navigation.php:186 navigation.php:187 problem.php:23
+#: navigation.php:190 post.php:21
+msgid "Discuss"
+msgstr "讨论"
+
+#: navigation.php:179 navigation.php:180 navigation.php:188 navigation.php:192
+#: navigation.php:184 navigation.php:186 navigation.php:187 navigation.php:190
+msgid "Discussion about the problems in sicily"
+msgstr "有关Sicily上的题目的讨论"
+
+#: index.php:5
+msgid "Download Algorithm Courseware"
+msgstr "下载算法设计课程课件"
+
+#: navigation.php:184 navigation.php:185 navigation.php:193 navigation.php:197
+#: navigation.php:189 navigation.php:191 navigation.php:192 navigation.php:196
+msgid "Edit Contests"
+msgstr "编辑比赛"
+
+#: navigation.php:186 navigation.php:187 navigation.php:195 navigation.php:199
+#: navigation.php:191 navigation.php:193 navigation.php:199
+msgid "Edit Users"
+msgstr "编辑用户"
+
+#: navigation.php:198 navigation.php:199 navigation.php:207 navigation.php:211
+#: navigation.php:205 navigation.php:209 navigation.php:213
+msgid "Edit contest"
+msgstr "编辑比赛"
+
+#: navigation.php:197 navigation.php:198 navigation.php:206 navigation.php:210
+msgid "Edit contest problems"
+msgstr "编辑比赛题目"
+
+#: navigation.php:173 navigation.php:174 navigation.php:182 navigation.php:186
+#: navigation.php:178 navigation.php:180 navigation.php:181 navigation.php:189
+msgid "Edit my profile setting"
+msgstr "编辑我的个人设定"
+
+#: navigation.php:197 navigation.php:198 navigation.php:206 navigation.php:210
+#: navigation.php:203 navigation.php:205 navigation.php:207 navigation.php:211
+msgid "Edit problem"
+msgstr "编辑题目"
+
+#: navigation.php:183 navigation.php:184 navigation.php:192 navigation.php:196
+#: navigation.php:188 navigation.php:190 navigation.php:191 navigation.php:195
+msgid "Edit problems"
+msgstr "编辑题目"
+
+#: navigation.php:198 navigation.php:199 navigation.php:207 navigation.php:211
+#: navigation.php:205 navigation.php:209 navigation.php:213
+msgid "Edit this contest"
+msgstr "编辑比赛"
+
+#: navigation.php:177 navigation.php:178 navigation.php:186 navigation.php:190
+#: navigation.php:182 navigation.php:184 navigation.php:185 navigation.php:185
+msgid "Enter Management Mode"
+msgstr "进入管理模式"
+
+#: navigation.php:182 navigation.php:183 navigation.php:191 navigation.php:195
+#: navigation.php:187 navigation.php:189 navigation.php:190 navigation.php:194
+msgid "Exit"
+msgstr "退出"
+
+#: navigation.php:182 navigation.php:183 navigation.php:191 navigation.php:195
+#: navigation.php:187 navigation.php:189 navigation.php:190 navigation.php:194
+msgid "Exit Management Mode"
+msgstr "退出管理模式"
+
+#: navigation.php:139 navigation.php:147 navigation.php:151 navigation.php:144
+#: navigation.php:146 navigation.php:148
+msgid "Forget"
+msgstr "忘记密码"
+
+#: navigation.php:139 navigation.php:147 navigation.php:151 navigation.php:144
+#: navigation.php:146 navigation.php:148
+msgid "Forget your password?"
+msgstr "点击这里找回密码"
+
+#: navigation.php:180 navigation.php:181 navigation.php:189 navigation.php:193
+#: navigation.php:185 navigation.php:187 navigation.php:188 navigation.php:192
+msgid "Help"
+msgstr "帮助"
+
+#: show_problem.php:229 show_problem.php:237 show_problem.php:223
+#: problem.php:95
+msgid "Hint"
+msgstr "提示"
+
+#: navigation.php:164 navigation.php:165 navigation.php:173 navigation.php:177
+#: navigation.php:169 navigation.php:171 navigation.php:173
+msgid "Home"
+msgstr "主页"
+
+#: problem_list.php:93 contests.php:56 cproblem_list.php:43 contests.php:51
+#: course_detail.php:40 course_detail.php:64 contest_detail.php:48
+#: problem_list.php:95 courses.php:22 contests.php:52 course_detail.php:42
+#: course_detail.php:66 contest_detail.php:53 course_detail.php:42
+#: course_detail.php:66 contests.php:52 problem_tab.php:80 courses.php:22
+#: contest_detail.php:53
+msgid "ID"
+msgstr "编号"
+
+#: navigation.php:79 navigation.php:87 navigation.php:90 navigation.php:81
+#: navigation.php:83 navigation.php:88
+msgid "Infomation"
+msgstr "提示"
+
+#: show_problem.php:206 show_problem.php:212 show_problem.php:198
+#: problem.php:79
+msgid "Input"
+msgstr "输入格式"
+
+#: navigation.php:104 navigation.php:112 navigation.php:115 navigation.php:106
+#: navigation.php:108 navigation.php:112
+msgid "Logout"
+msgstr "登出"
+
+#: show_problem.php:200 show_problem.php:205 show_problem.php:191
+msgid "MB"
+msgstr "兆"
+
+#: navigation.php:177 navigation.php:178 navigation.php:186 navigation.php:190
+#: navigation.php:182 navigation.php:184 navigation.php:185 navigation.php:185
+msgid "Management"
+msgstr "管理"
+
+#: show_problem.php:200 show_problem.php:205 show_problem.php:191
+msgid "Memory Limit:"
+msgstr "内存限制："
+
+#: navigation.php:172 navigation.php:193 navigation.php:173 navigation.php:194
+#: navigation.php:181 navigation.php:202 navigation.php:185 navigation.php:206
+#: navigation.php:177 navigation.php:197 navigation.php:179 navigation.php:199
+#: navigation.php:180 navigation.php:201 navigation.php:205
+msgid "My Status"
+msgstr "提交状态"
+
+#: show_problem.php:207 show_problem.php:214 show_problem.php:200
+#: problem.php:83
+msgid "Output"
+msgstr "输出格式"
+
+#: navigation.php:123 navigation.php:131 navigation.php:134 login.php:50
+#: login.php:46 navigation.php:126 navigation.php:128 login.php:46
+#: navigation.php:131
+msgid "Password:"
+msgstr "密码："
+
+#: show_problem.php:302 show_problem.php:311
+msgid "Problem Source:"
+msgstr "题目来源："
+
+#: navigation.php:167 navigation.php:183 navigation.php:191 navigation.php:168
+#: navigation.php:184 navigation.php:192 navigation.php:176 navigation.php:200
+#: navigation.php:180 navigation.php:196 navigation.php:204 navigation.php:172
+#: navigation.php:188 navigation.php:195 navigation.php:174 navigation.php:190
+#: navigation.php:197 navigation.php:199 navigation.php:176 navigation.php:195
+#: navigation.php:203
+msgid "Problems"
+msgstr "题目"
+
+#: problem.php:13
+msgid "Problems List"
+msgstr "题目列表"
+
+#: navigation.php:169 navigation.php:170 navigation.php:178 navigation.php:182
+#: navigation.php:174 navigation.php:176 navigation.php:177 navigation.php:179
+msgid "Ranklist"
+msgstr "排名"
+
+#: problem_list.php:93 problem_list.php:95 problem_tab.php:80
+msgid "Rating"
+msgstr "评价"
+
+#: show_problem.php:148 show_problem.php:155 show_problem.php:141
+msgid "Rating:"
+msgstr "评价："
+
+#: problem_list.php:93 problem_list.php:95 problem_tab.php:80
+msgid "Ratio"
+msgstr "通过率"
+
+#: navigation.php:138 navigation.php:146 navigation.php:150 navigation.php:143
+#: navigation.php:145 navigation.php:147
+msgid "Register"
+msgstr "注册帐号"
+
+#: navigation.php:164 navigation.php:165 navigation.php:173 navigation.php:177
+#: navigation.php:169 navigation.php:171 navigation.php:173
+msgid "Return to Homepage"
+msgstr "返回主页"
+
+#: show_problem.php:210 show_problem.php:217 show_problem.php:203
+#: problem.php:87
+msgid "Sample Input"
+msgstr "样例输入"
+
+#: show_problem.php:223 show_problem.php:230 show_problem.php:216
+#: problem.php:91
+msgid "Sample Output"
+msgstr "样例输出"
+
+#: navigation.php:173 navigation.php:174 navigation.php:182 navigation.php:186
+#: navigation.php:178 navigation.php:180 navigation.php:181 navigation.php:189
+msgid "Setting"
+msgstr "设定"
+
+#: navigation.php:138 navigation.php:146 navigation.php:150 navigation.php:143
+#: navigation.php:145 navigation.php:147
+msgid "Sign up for a new account"
+msgstr "注册一个新的帐号"
+
+#: problem_list.php:93 ranklist.php:33 user.php:44 standing.php:72
+#: standing.php:81 standing_full.php:81 standing.php:174 ranklist.php:35
+#: standing_full.php:79 standing.php:175 standing_full.php:79 ranklist.php:35
+#: standing.php:194 standing.php:201
+msgid "Solved"
+msgstr "通过数量"
+
+#: navigation.php:195 navigation.php:196 navigation.php:204 navigation.php:208
+#: navigation.php:199 navigation.php:201 navigation.php:203 navigation.php:207
+msgid "Standing"
+msgstr "排名"
+
+#: problem_list.php:93 status.php:123 status.php:125 cproblem_list.php:43
+#: status.php:129 status.php:131 contest_detail.php:48 problem_list.php:95
+#: courses.php:26 status.php:132 contest_detail.php:53 status.php:132
+#: problem_tab.php:80 courses.php:26 show_problem.php:267 navigation.php:184
+#: navigation.php:187 admin/stdprogram.php:71 contest_detail.php:53
+msgid "Status"
+msgstr "提交状态"
+
+#: problem_list.php:93 ranklist.php:34 user.php:48 cproblem_list.php:43
+#: ranklist.php:36 contest_detail.php:48 problem_list.php:95
+#: contest_detail.php:53 problem_tab.php:80 ranklist.php:36 standing.php:214
+#: contest_detail.php:53
+msgid "Submissions"
+msgstr "提交数量"
+
+#: navigation.php:171 navigation.php:172 submit.php:57 submit.php:92
+#: navigation.php:180 navigation.php:184 navigation.php:176 navigation.php:178
+#: submit.php:85 submit.php:122 navigation.php:179 submit.php:86
+#: submit.php:123 submit.php:87 submit.php:125 submit.php:86 submit.php:124
+#: show_problem.php:269 problem.php:59 problem.php:107 navigation.php:181
+#: admin/stdprogram.php:201 admin/stdprogram.php:233
+msgid "Submit"
+msgstr "提交"
+
+#: navigation.php:171 navigation.php:172 navigation.php:180 navigation.php:184
+#: navigation.php:176 navigation.php:178 navigation.php:179 navigation.php:181
+msgid "Submit source code"
+msgstr "提交源代码"
+
+#: navigation.php:180 navigation.php:181 navigation.php:189 navigation.php:193
+#: navigation.php:185 navigation.php:187 navigation.php:188 navigation.php:192
+msgid "Submittion guileline etc."
+msgstr "系统使用指引"
+
+#: show_problem.php:199 show_problem.php:204 show_problem.php:190
+msgid "Time Limit: "
+msgstr "时间限制："
+
+#: problem_list.php:93 contests.php:57 cproblem_list.php:43 contests.php:52
+#: contest_detail.php:48 problem_list.php:95 contests.php:53
+#: contest_detail.php:53 contests.php:53 problem_tab.php:80
+#: contest_detail.php:53
+msgid "Title"
+msgstr "题目标题"
+
+#: show_problem.php:142 show_problem.php:149 show_problem.php:135
+msgid "Total:"
+msgstr "总提交数量："
+
+#: navigation.php:90 navigation.php:98 navigation.php:101 navigation.php:92
+#: navigation.php:94 navigation.php:98
+msgid "Unauthorized"
+msgstr "未验证"
+
+#: show_problem.php:152 show_problem.php:159 show_problem.php:145
+msgid "Unrated"
+msgstr "无"
+
+#: navigation.php:117 navigation.php:125 navigation.php:128 login.php:48
+#: login.php:44 navigation.php:119 navigation.php:121 login.php:44
+#: navigation.php:125
+msgid "Username:"
+msgstr "用户名："
+
+#: navigation.php:186 navigation.php:187 navigation.php:195 navigation.php:199
+#: navigation.php:191 navigation.php:193 navigation.php:199
+msgid "Users"
+msgstr "用户"
+
+#: navigation.php:191 navigation.php:192 navigation.php:200 navigation.php:204
+#: navigation.php:195 navigation.php:197 navigation.php:199 navigation.php:203
+msgid "View all contest problems"
+msgstr "查看所有比赛题目"
+
+#: navigation.php:168 navigation.php:169 navigation.php:177 navigation.php:181
+#: navigation.php:173 navigation.php:175 navigation.php:177
+msgid "View all contests"
+msgstr "查看所有比赛"
+
+#: navigation.php:167 navigation.php:168 navigation.php:176 navigation.php:180
+#: navigation.php:172 navigation.php:174 navigation.php:176
+msgid "View all problems"
+msgstr "查看所有题目"
+
+#: navigation.php:195 navigation.php:196 navigation.php:204 navigation.php:208
+#: navigation.php:199 navigation.php:201 navigation.php:203 navigation.php:207
+msgid "View contest standing"
+msgstr "查看比赛排名"
+
+#: navigation.php:172 navigation.php:193 navigation.php:173 navigation.php:194
+#: navigation.php:181 navigation.php:202 navigation.php:185 navigation.php:206
+#: navigation.php:177 navigation.php:197 navigation.php:179 navigation.php:199
+#: navigation.php:180 navigation.php:201 navigation.php:187 navigation.php:205
+msgid "View my submission status"
+msgstr "查看所有提交状态"
+
+#: navigation.php:169 navigation.php:170 navigation.php:178 navigation.php:182
+#: navigation.php:174 navigation.php:176 navigation.php:177 navigation.php:179
+msgid "View user ranklist"
+msgstr "查看用户排名"
+
+#: navigation.php:101 navigation.php:109 navigation.php:112 navigation.php:103
+#: navigation.php:105 navigation.php:109
+msgid "You havn't any signature yet."
+msgstr "你还没有设置任何签名^_^"
+
+#: show_problem.php:121 show_problem.php:128 show_problem.php:114
+msgid "[Special judge]"
+msgstr "[特殊测评]"
+
+#: navigation.php:208 navigation.php:209 navigation.php:217 navigation.php:221
+#: navigation.php:219 navigation.php:223 navigation.php:222 navigation.php:226
+msgid "change window's width"
+msgstr "更改窗口宽度"
+
+#: show_problem.php:199 status.php:151 status.php:153 status.php:157
+#: show_problem.php:204 status.php:165 status.php:167 status.php:167
+#: show_problem.php:190 admin/stdprogram.php:106
+msgid "sec"
+msgstr "秒"
+
+#: navigation.php:151 navigation.php:159 navigation.php:163 navigation.php:155
+#: navigation.php:157 navigation.php:159
+msgid "username or password incorrect."
+msgstr "用户名或者密码错误"
+
+#: show_problem.php:150 show_problem.php:157 show_problem.php:143
+#, php-format
+msgid "votes"
+msgstr "票"
+
+#: contests.php:16 contests.php:15 contests.php:15
+msgid "Public"
+msgstr "公开比赛"
+
+#: contests.php:16 settings.php:49 contests.php:15 register.php:27
+#: course_detail.php:23 profile_login.php:40 contest_password.php:50
+#: course_detail.php:23 contests.php:15 profile_login.php:40
+#: contest_password.php:50 register.php:27
+msgid "Password"
+msgstr "需要密码"
+
+#: contests.php:16 contests.php:15 course_detail.php:23 course_detail.php:23
+#: contests.php:15
+msgid "Internal"
+msgstr "校内比赛"
+
+#: contests.php:16 contests.php:15 course_detail.php:23 course_detail.php:23
+#: contests.php:15
+msgid "Netid"
+msgstr "需要验证"
+
+#: contests.php:40 contests.php:39 contests.php:39
+msgid "Please input password"
+msgstr "请输入密码"
+
+#: contests.php:58 contests.php:53 course_detail.php:67 contests.php:54
+#: course_detail.php:69 course_detail.php:69 contests.php:54
+msgid "Schedule"
+msgstr "计划"
+
+#: contests.php:59 contests.php:54 contests.php:55 course_detail.php:70
+#: course_detail.php:70 contests.php:55
+msgid "Authorzation"
+msgstr "验证类型"
+
+#: contests.php:90 standing.php:41 standing.php:40 standing_full.php:40
+#: standing.php:18 contests.php:83 course_detail.php:85 standing_full.php:41
+#: contests.php:80 course_detail.php:90 standing_full.php:41
+#: course_detail.php:90 contests.php:80 standing.php:18
+msgid "Starts at "
+msgstr "开始于"
+
+#: contests.php:91 contests.php:95 standing.php:42 standing.php:47
+#: standing.php:41 standing.php:46 standing_full.php:41 standing_full.php:46
+#: standing.php:19 standing.php:22 contests.php:84 contests.php:87
+#: course_detail.php:88 standing_full.php:42 standing_full.php:45
+#: contests.php:81 course_detail.php:93 standing_full.php:42
+#: standing_full.php:45 course_detail.php:93 contests.php:81 contests.php:84
+#: standing.php:19 standing.php:22
+#, php-format
+msgid "%02d:%02d:%02d Left"
+msgstr "还剩下%02d:%02d:%02d"
+
+#: contests.php:94 standing.php:46 standing.php:45 standing_full.php:45
+#: standing.php:21 contests.php:86 course_detail.php:87 standing_full.php:44
+#: contests.php:83 course_detail.php:92 standing_full.php:44
+#: course_detail.php:92 contests.php:83 standing.php:21
+msgid "Running, "
+msgstr "正在进行中，"
+
+#: contests.php:97 contests.php:90 course_detail.php:90 contests.php:87
+#: course_detail.php:95 course_detail.php:95 contests.php:87
+msgid "Finished at "
+msgstr "结束于"
+
+#: footer.php:6 login.php:43 login.php:39 footer.php:6 login.php:39
+msgid "Sicily Online Judge System"
+msgstr "Sicily在线测评系统"
+
+#: ranklist.php:30 user.php:40 ranklist.php:32 user.php:76 user.php:78
+#: user.php:79 ranklist.php:32
+msgid "Rank"
+msgstr "排名"
+
+#: ranklist.php:31 ranklist.php:33 course_detail.php:41 course_detail.php:65
+#: courses.php:23 course_detail.php:43 course_detail.php:67
+#: course_detail.php:43 course_detail.php:67 courses.php:23 ranklist.php:33
+msgid "Name"
+msgstr "名称"
+
+#: ranklist.php:32 settings.php:91 ranklist.php:34 user.php:72 user.php:74
+#: user.php:75 ranklist.php:34
+msgid "Signature"
+msgstr "签名"
+
+#: submit.php:60 user.php:36 settings.php:42 submit.php:88 register.php:21
+#: submit.php:89 profile_chpwd.php:33 profile_login.php:34 submit.php:91
+#: submit.php:90 profile_login.php:34 profile_chpwd.php:33 register.php:21
+#: admin/stdprogram.php:205
+msgid "User name"
+msgstr "用户名"
+
+#: submit.php:66 status.php:79 status.php:81 status.php:85 submit.php:94
+#: status.php:88 submit.php:95 submit.php:97 status.php:86 submit.php:96
+#: admin/stdprogram.php:210
+msgid "Problem ID"
+msgstr "题目编号"
+
+#: submit.php:69 submit.php:98 submit.php:99 submit.php:101 submit.php:100
+msgid "Running Contest"
+msgstr "正在进行的比赛"
+
+#: submit.php:74 status.php:100 status.php:122 status.php:102 status.php:124
+#: status.php:106 status.php:128 submit.php:104 status.php:110 status.php:130
+#: submit.php:105 status.php:131 submit.php:107 status.php:108 status.php:131
+#: submit.php:106 admin/stdprogram.php:70 admin/stdprogram.php:216
+msgid "Language"
+msgstr "语言种类"
+
+#: submit.php:85 submit.php:115 submit.php:116 submit.php:118 submit.php:117
+#: admin/stdprogram.php:226
+msgid "Source"
+msgstr "源代码"
+
+#: status.php:85 status.php:87 status.php:91 status.php:94 status.php:92
+msgid "User ID"
+msgstr "用户名"
+
+#: status.php:87 status.php:89 status.php:93 status.php:97 status.php:95
+msgid "Result"
+msgstr "结果"
+
+#: status.php:89 status.php:102 status.php:91 status.php:104 status.php:95
+#: status.php:108 status.php:99 status.php:112 status.php:97 status.php:110
+msgid "All"
+msgstr "所有"
+
+#: status.php:119 status.php:121 status.php:125 status.php:127 status.php:128
+#: status.php:127 admin/stdprogram.php:66
+msgid "Run ID"
+msgstr "提交序号"
+
+#: status.php:120 status.php:122 status.php:126 standing.php:56
+#: standing.php:55 standing_full.php:55 standing.php:166 status.php:128
+#: standing.php:167 status.php:129 status.php:129 standing_full.php:55
+#: admin/stdprogram.php:68 standing.php:186
+msgid "User Name"
+msgstr "用户名"
+
+#: status.php:121 status.php:123 status.php:127 status.php:129 status.php:130
+#: status.php:130 admin/stdprogram.php:69
+msgid "Problem"
+msgstr "题目编号"
+
+#: status.php:124 status.php:126 status.php:130 status.php:132 status.php:133
+#: status.php:133 admin/stdprogram.php:72
+msgid "Run Time"
+msgstr "运行时间"
+
+#: status.php:125 status.php:127 status.php:131 status.php:133 status.php:134
+#: status.php:134 admin/stdprogram.php:73
+msgid "Run Memory"
+msgstr "内存用量"
+
+#: status.php:126 status.php:128 status.php:132 status.php:134 status.php:135
+#: status.php:135 admin/stdprogram.php:74
+msgid "Code Length"
+msgstr "代码长度"
+
+#: status.php:127 status.php:129 status.php:133 status.php:135 status.php:136
+#: status.php:136 admin/stdprogram.php:75
+msgid "Submit Time"
+msgstr "提交时间"
+
+#: status.php:149 status.php:150 status.php:151 status.php:152 status.php:154
+#: status.php:153 status.php:156 status.php:155 status.php:157 status.php:158
+#: status.php:160 status.php:161 status.php:163 status.php:164 status.php:166
+#: status.php:169 status.php:165 status.php:168 status.php:171 status.php:163
+#: status.php:165 status.php:166 status.php:168 status.php:171
+#: admin/stdprogram.php:102 admin/stdprogram.php:104 admin/stdprogram.php:105
+#: admin/stdprogram.php:107 admin/stdprogram.php:110
+msgid "N/A"
+msgstr "无"
+
+#: status.php:152 status.php:154 status.php:158 status.php:167 status.php:169
+#: status.php:169 admin/stdprogram.php:108
+msgid " KB"
+msgstr " KB"
+
+#: status.php:156 status.php:158 status.php:162 status.php:171 status.php:173
+#: status.php:173 admin/stdprogram.php:112
+msgid " Bytes"
+msgstr " 字节"
+
+#: user.php:52 settings.php:67 register.php:39 user.php:88 user.php:90
+#: user.php:91 register.php:39
+msgid "Email"
+msgstr "电子邮箱"
+
+#: user.php:56 settings.php:73
+msgid "Address"
+msgstr "地址"
+
+#: user.php:60 user.php:135 user.php:137 user.php:138
+msgid "Register time"
+msgstr "注册时间"
+
+#: user.php:108 user.php:157 user.php:165 user.php:166
+msgid "Compare"
+msgstr "比较"
+
+#: user.php:109 user.php:158 user.php:166 user.php:167
+msgid "and"
+msgstr "和"
+
+#: user.php:116 user.php:165 user.php:159 user.php:160
+msgid "List of solved problems"
+msgstr "通过题目列表"
+
+#: user.php:128 user.php:174 user.php:179 user.php:180
+msgid "No problems has been solved :("
+msgstr "没有通过任何题目 :("
+
+#: settings.php:39
+msgid "Update Setting"
+msgstr "更新个人设定"
+
+#: settings.php:55 profile_chpwd.php:46 profile_chpwd.php:46
+msgid "New password"
+msgstr "新密码"
+
+#: settings.php:61 register.php:33 profile_chpwd.php:52 profile_chpwd.php:52
+#: register.php:33
+msgid "Confirm password"
+msgstr "确认密码"
+
+#: settings.php:79
+msgid "Telephone"
+msgstr "联系电话"
+
+#: settings.php:85 user.php:68 user.php:70 user.php:71
+msgid "Nickname"
+msgstr "昵称"
+
+#: settings.php:98 profile_chpwd.php:59 profile_chpwd.php:59
+msgid "Update"
+msgstr "更新"
+
+#: cproblem_list.php:7 contest_detail.php:8 contest_detail.php:18
+#: contest_detail.php:18
+msgid "This contest is not started yet."
+msgstr "比赛尚未开始"
+
+#: cproblem_list.php:8 contest_detail.php:10 contest_detail.php:20
+#: contest_detail.php:20
+msgid "You can't access to the contest"
+msgstr "你没有权限进入这个比赛"
+
+#: cproblem_list.php:47 contest_detail.php:52 contest_detail.php:57
+#: contest_detail.php:57
+msgid "[Speical judge]"
+msgstr "[特殊测评]"
+
+#: status.php:12 submit.php:15 status.php:13 status.php:13 submit.php:14
+#: admin/stdprogram.php:12
+msgid "Wrong Answer"
+msgstr "答案错误"
+
+#: status.php:12 submit.php:16 status.php:13 status.php:13 submit.php:15
+#: admin/stdprogram.php:12
+msgid "Compile Error"
+msgstr "编译失败"
+
+#: status.php:13 submit.php:17 status.php:14 status.php:14 submit.php:16
+#: admin/stdprogram.php:13
+msgid "Runtime Error"
+msgstr "运行出错"
+
+#: status.php:13 submit.php:18 status.php:14 status.php:14 submit.php:17
+#: admin/stdprogram.php:13
+msgid "Time Limit Exceeded"
+msgstr "超过时间限制"
+
+#: status.php:13 submit.php:19 status.php:14 status.php:14 submit.php:18
+#: admin/stdprogram.php:13
+msgid "Memory Limit Exceeded"
+msgstr "超过内存限制"
+
+#: status.php:14 submit.php:20 status.php:15 status.php:15 submit.php:19
+#: admin/stdprogram.php:14
+msgid "Output Limit Exceeded"
+msgstr "超过输出大小限制"
+
+#: status.php:14 submit.php:21 status.php:15 status.php:15 submit.php:20
+#: admin/stdprogram.php:14
+msgid "Presentation Error"
+msgstr "格式错误"
+
+#: status.php:14 submit.php:22 status.php:15 status.php:15 submit.php:21
+#: admin/stdprogram.php:14
+msgid "Restrict Function"
+msgstr "禁止函数调用"
+
+#: status.php:15 status.php:16 status.php:16 admin/stdprogram.php:15
+msgid "Running"
+msgstr "正在运行"
+
+#: status.php:15 status.php:16 status.php:16 admin/stdprogram.php:15
+msgid "Other"
+msgstr "其他"
+
+#: status.php:15 status.php:16 status.php:16 admin/stdprogram.php:15
+msgid "Waiting"
+msgstr "等待测试"
+
+#: status.php:12 status.php:13 status.php:13 admin/stdprogram.php:12
+msgid "Accepted "
+msgstr "通过"
+
+#: status.php:121 status.php:123 status.php:121
+msgid "Go"
+msgstr "查询"
+
+#: standing.php:49 standing.php:48 standing_full.php:48 standing.php:25
+#: standing_full.php:48 standing.php:25
+msgid "Finished"
+msgstr "已结束"
+
+#: standing.php:55 standing.php:54 standing_full.php:54 standing.php:165
+#: standing.php:166 standing_full.php:54 standing.php:185
+msgid "No"
+msgstr "序号"
+
+#: standing.php:73 standing.php:82 standing_full.php:82 standing.php:175
+#: standing_full.php:80 standing.php:176 standing_full.php:80 standing.php:195
+msgid "Penalty"
+msgstr "罚时"
+
+#: login.php:10 profile_login.php:11 profile_login.php:11 login.php:10
+msgid "Invalid username or password"
+msgstr "用户名或密码非法"
+
+#: login.php:52 login.php:48 profile_login.php:53 profile_login.php:53
+#: login.php:48
+msgid "Login"
+msgstr "登录"
+
+#: standing.php:136 standing_full.php:138 standing.php:232
+#: standing_full.php:137 standing.php:233 standing_full.php:137
+msgid "Summary"
+msgstr "总结"
+
+#: navigation.php:203 navigation.php:205 navigation.php:207 navigation.php:211
+msgid "Edit this problem"
+msgstr "编辑这道题目"
+
+#: navigation.php:206 navigation.php:208 navigation.php:210 navigation.php:214
+msgid "Manage problems"
+msgstr "管理题目"
+
+#: navigation.php:206 navigation.php:208 navigation.php:210 navigation.php:214
+msgid "Manage contest problems"
+msgstr "管理比赛题目"
+
+#: navigation.php:207 navigation.php:209 navigation.php:211
+msgid "Manage contests"
+msgstr "管理比赛"
+
+#: navigation.php:207 navigation.php:209 navigation.php:211
+msgid "Manage all your contests"
+msgstr "管理所有比赛"
+
+#: inc/contest.inc.php:25 inc/contest.inc.php:19 inc/contest.inc.php:19
+msgid "Contest is not started yet."
+msgstr "比赛尚未开始"
+
+#: inc/contest.inc.php:26 inc/contest.inc.php:20 inc/contest.inc.php:20
+msgid "Contest ends in "
+msgstr "比赛还剩"
+
+#: inc/contest.inc.php:27 inc/contest.inc.php:21 inc/contest.inc.php:21
+msgid "Contest finished."
+msgstr "比赛结束"
+
+#: inc/contest.inc.php:28 inc/contest.inc.php:24 inc/contest.inc.php:24
+msgid " hours "
+msgstr "小时 "
+
+#: inc/contest.inc.php:29 inc/contest.inc.php:25 inc/contest.inc.php:25
+msgid " minutes "
+msgstr "分钟 "
+
+#: inc/contest.inc.php:30 inc/contest.inc.php:26 inc/contest.inc.php:26
+msgid " seconds "
+msgstr "秒 "
+
+#: submit.php:14 submit.php:13
+msgid "Congradulations. You have solved this problem"
+msgstr "恭喜，你通过了本题。"
+
+#: submit.php:15 submit.php:14
+msgid "Some of your output doesn't match the standard output"
+msgstr "你的程序输出与标准答案不一样。"
+
+#: submit.php:16 submit.php:15
+msgid "Our compiler can not recognize your source code."
+msgstr "你的程序通不过编译。"
+
+#: submit.php:17 submit.php:16
+msgid "Your program got fatal errors in runtime."
+msgstr "你的程序运行崩溃了"
+
+#: submit.php:18 submit.php:17
+msgid "The program cost too much time"
+msgstr "程序运行时间超过了时间限制"
+
+#: submit.php:19 submit.php:18
+msgid "The program cost too much memory space"
+msgstr "程序申请的内存大小超过了内存限制"
+
+#: submit.php:20 submit.php:19
+msgid "It may be in an infinite loop."
+msgstr "程序输出过多的内容。有可能是死循环了。"
+
+#: submit.php:21 submit.php:20
+msgid "It may be extra spaces/blank lines after each line/test case."
+msgstr "有可能是因为输出了额外的空格或空行，请仔细阅读题目输出格式。"
+
+#: submit.php:22 submit.php:21
+msgid "It may the same as Runtime Error"
+msgstr "程序崩溃了或者使用了禁止的函数"
+
+#: navigation.php:176 navigation.php:193 navigation.php:178 navigation.php:197
+msgid "Courses"
+msgstr "课程"
+
+#: navigation.php:176 navigation.php:193 navigation.php:178 navigation.php:197
+msgid "Edit Courses"
+msgstr "编辑课程"
+
+#: course_detail.php:36 course_detail.php:38 course_detail.php:38
+msgid "Course Detail"
+msgstr "课程详情"
+
+#: course_detail.php:42 courses.php:24 course_detail.php:44
+#: course_detail.php:44 courses.php:24
+msgid "Teacher"
+msgstr "教师"
+
+#: course_detail.php:43 course_detail.php:45 course_detail.php:45
+#: problem.php:19 post.php:17
+msgid "Statistics"
+msgstr "统计"
+
+#: course_detail.php:60 course_detail.php:62 course_detail.php:62
+msgid "Current Exercises"
+msgstr "当前练习"
+
+#: course_detail.php:66 course_detail.php:68 course_detail.php:68
+msgid "Information"
+msgstr "信息"
+
+#: courses.php:18 courses.php:18
+msgid "Current Courses"
+msgstr "当前课程"
+
+#: courses.php:25 courses.php:25
+msgid "Registrant No."
+msgstr "注册人数"
+
+#: register.php:18 register.php:18
+msgid "Register New User"
+msgstr "注册新用户"
+
+#: inc/conn.inc.php:297 inc/conn.inc.php:299
+msgid "Page"
+msgstr "页"
+
+#: inc/contest.inc.php:22 inc/contest.inc.php:22
+msgid " months "
+msgstr " 月 "
+
+#: inc/contest.inc.php:23 inc/contest.inc.php:23
+msgid " days "
+msgstr " 日 "
+
+#: profile_chpwd.php:30 profile_chpwd.php:30
+msgid "Change Password"
+msgstr "修改密码"
+
+#: profile_chpwd.php:40 profile_chpwd.php:40
+msgid "Original Password"
+msgstr "原始密码"
+
+#: user.php:80 user.php:82 user.php:83
+msgid "Solved No."
+msgstr "通过数量"
+
+#: user.php:84 user.php:86 user.php:87
+msgid "Submissions No."
+msgstr "提交数量"
+
+#: user.php:96 user.php:98 user.php:99
+msgid "Contact1"
+msgstr "联系方式1"
+
+#: user.php:100 user.php:102 user.php:103
+msgid "Contact2"
+msgstr "联系方式2"
+
+#: user.php:105 user.php:107 user.php:108
+msgid "NetID"
+msgstr "NetID"
+
+#: user.php:109 user.php:111 user.php:112
+msgid "Chinese Name"
+msgstr "中文名字"
+
+#: user.php:113 user.php:115 user.php:116
+msgid "English Name"
+msgstr "英文名字"
+
+#: user.php:117 user.php:119 user.php:120
+msgid "Student ID"
+msgstr "学号"
+
+#: user.php:121 user.php:123 user.php:124
+msgid "Major"
+msgstr "专业"
+
+#: user.php:125 user.php:127 user.php:128
+msgid "Grade"
+msgstr "年级"
+
+#: user.php:129 user.php:131 user.php:132
+msgid "Class"
+msgstr "班级"
+
+#: user.php:139 user.php:141 user.php:142
+msgid "Level"
+msgstr "等级"
+
+#: course_detail.php:23 course_detail.php:23
+msgid "Public Exercise"
+msgstr "公开练习"
+
+#: profile_login.php:31 profile_login.php:31
+msgid "User Login"
+msgstr "用户登陆"
+
+#: profile_login.php:46 profile_login.php:46
+msgid "Remember me"
+msgstr "记住我的登陆状态"
+
+#: contest_password.php:41 contest_password.php:41
+msgid "Enter password"
+msgstr "输入密码"
+
+#: contest_password.php:44 contest_password.php:44
+msgid "Contest/Exercise"
+msgstr "比赛/练习"
+
+#: post_market.php:141 post.php:176
+msgid "New Post"
+msgstr "新贴"
+
+#: post_market.php:146 post.php:181
+msgid "Select Catalog:"
+msgstr "选择类型："
+
+#: post_market.php:148 post.php:183
+msgid "Default"
+msgstr "默认"
+
+#: post_market.php:149 post.php:184
+msgid "General"
+msgstr "普通"
+
+#: post_market.php:151 post.php:186
+msgid "Special"
+msgstr "特殊"
+
+#: post_market.php:152 post.php:187
+msgid "Solution"
+msgstr "题目解答"
+
+#: post_market.php:153 post.php:188
+msgid "Clarification"
+msgstr "题意澄清"
+
+#: post_market.php:158 post.php:193
+msgid "Submit Post"
+msgstr "提交"
+
+#: post_market.php:159 problem.php:66 post.php:194
+msgid "Cancel"
+msgstr "取消"
+
+#: post_market.php:270 post.php:302
+msgid "There aren't any posts yet."
+msgstr "暂时还没有任何帖子"
+
+#: json/problem.php:26 json/problem.php:41 json/problem.php:70
+#: json/post.php:26 json/post.php:49 json/post.php:78
+msgid "You must login first"
+msgstr "请先登录"
+
+#: json/problem.php:42 json/post.php:50
+msgid "Your reply is too short"
+msgstr "回复内容长度过短"
+
+#: json/problem.php:78 json/post.php:86
+msgid "You have rated this post as useful."
+msgstr "你已经对该贴评过分"
+
+#: json/post.php:27
+msgid "Your post is too short"
+msgstr "内容长度过短"
+
+#: json/post.php:35
+msgid "Invalid problem"
+msgstr "非法题目"
+
+#: show_problem.php:271
+msgid "Source Code"
+msgstr "源代码"
+
+#: problem.php:21 post.php:19
+msgid "Source code"
+msgstr "源代码"
+
+#: problem.php:24 post.php:22
+msgid "Solutions"
+msgstr "题解"
+
+#: problem.php:25 post.php:23
+msgid "Clarifications"
+msgstr "题意澄清"
+
+#: problem.php:38 post.php:163
+msgid "Switch to old style >>"
+msgstr "切换到旧样式>>"
+
+#: problem.php:41 post.php:16
+msgid "Problem Description"
+msgstr "题目"
+
+#: problem.php:44
+msgid "Solved Number"
+msgstr "通过数量"
+
+#: problem.php:45
+msgid "Submit Number"
+msgstr "提交数量"
+
+#: problem.php:46
+msgid "Time Limit"
+msgstr "时间限制"
+
+#: problem.php:47
+msgid "Memory Limit"
+msgstr "内存限制"
+
+#: problem.php:48
+msgid "Special Judge"
+msgstr "特殊测评"
+
+#: problem.php:49
+msgid "Framework Judge"
+msgstr "框架测评"
+
+#: problem.php:65
+msgid "Submit Source"
+msgstr "提交代码"
+
+#: navigation.php:191
+msgid "Archives"
+msgstr "资料归档"
+
+#: navigation.php:191
+msgid "Archives about sicily"
+msgstr "有关Sicily及题目的资料总结"
+
+#: standing.php:227
+msgid "Earliest AC Time"
+msgstr "最早通过时间"

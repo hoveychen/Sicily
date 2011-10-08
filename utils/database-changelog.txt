@@ -1,0 +1,10 @@
+CREATE TABLE  `posts` (
+ `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+ `catalog` ENUM(  'Solution',  'Clarification',  'Question',  'General' ) NOT NULL DEFAULT  'General',
+ `time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+ `user_id` INT NOT NULL ,
+ `content` TEXT NOT NULL ,
+ `reply_id` INT NOT NULL ,
+ `useful` INT NOT NULL DEFAULT  '0',
+INDEX (  `catalog` ,  `reply_id` )
+) ENGINE = MYISAM ;

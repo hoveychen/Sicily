@@ -1,0 +1,16 @@
+<?php
+
+//  ------------------
+//  connection setting
+//  ------------------
+class Config {
+    static public $db_host_name = "localhost";
+    static public $db_user_name = "username";
+    static public $db_password = "password";
+    static public $db_database = "sicily";
+    static public $onsite = FALSE;
+}
+
+$judge_amount = 1;
+$sicily_version = "Test";
+?>

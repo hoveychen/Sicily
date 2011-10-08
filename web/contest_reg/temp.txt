@@ -1,0 +1,723 @@
+<?php
+if ($_GET['mode'] != 'debug')
+	require_once("include/checktime.php");
+session_start();
+?>
+<html>
+<head>
+<title>Register</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link rel="stylesheet" href="style.css">
+<script language="javascript" type="text/javascript">
+var selector = [
+"title1", 
+"degree1", 
+"major1",
+"title2", 
+"degree2", 
+"major2",
+"title3", 
+"degree3", 
+"major3",
+];
+var value = new Array();
+<?php
+$fields = array("firstname", "lastname", "cnname", "title", "location", "country", "email", "phone", "gender", "institution", "degree", "major", "majorcn", "admitdate", "graduatedate", "birthday", "grade", "class");
+for ($i = 1; $i <= 3; $i++)
+{
+	foreach($fields as $val)
+	{
+		if (isset($_SESSION[$val.$i]))
+		{
+			print "value['$val$i'] = '{$_SESSION[$val.$i]}';\n";
+		}
+	}
+}
+if (isset($_SESSION['teamen']))
+	print "value['teamen'] = '{$_SESSION['teamen']}';\n";
+if (isset($_SESSION['teamcn']))
+	print "value['teamcn'] = '{$_SESSION['teamcn']}';\n";
+?>
+function setFields(){
+	var teamen = document.getElementById("teamen");
+	if (obj)
+	{
+		if (!checkInput(teamen))
+			return false;
+	}
+	var teamcn = document.getElementById("teamcn");
+	if (obj)
+	{
+		if (!checkInput(teamen))
+			return false;
+	}
+	for (i in value)
+	{
+		obj = document.getElementById(i);
+		if (obj && obj.type == "text")
+		{
+			obj.value = value[i];
+		}
+	}
+	for (i = 0; i < selector.length; i++)
+	{
+		id = selector[i];
+		if (value[id])
+		{
+			var obj = document.getElementById(id);
+			if (!obj || !obj.options) continue;
+			item = obj.options;
+			for (j = 0; j < item.length; j++)
+			{
+				if (item[j].value == value[id])
+				{
+					obj.selectedIndex = j;
+					break;
+				}
+			}
+			
+		}
+	}
+}
+
+function checkLen(obj, len)
+{
+	return obj.value.length <= len;
+}
+
+function inputError(obj, msg)
+{
+	obj.focus();
+	if (obj.select()) obj.select();
+	alert(msg);
+}
+
+function checkNumber(obj)
+{
+	var pattern = /^(\d+)$/;
+	if (obj && obj.value)
+	{
+		if (!pattern.exec(obj.value))
+		{
+			inputError(obj, "It should be a number!");
+			return false;
+		}
+	}
+	return true;
+}
+
+function checkDate(obj)
+{
+	var pattern = /^(\d{4})-(\d{1,2})-(\d{1,2})$/;
+	var monthday = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+	if (obj && obj.value)
+	{
+		var result = pattern.exec(obj.value);
+		if (!result)
+		{
+			inputError(obj, "Date format incorrect");
+			return false;
+		}
+		var year = parseInt(result[1], 10);
+		var month = parseInt(result[2], 10);
+		var day = parseInt(result[3], 10);
+		if (year < 1980) {
+			inputError(obj, "It is too early");
+			return false;
+		}else if (month < 1 || month > 12){
+			inputError(obj, "Month error.");
+			return false;
+		}else if (day < 1 || day > monthday[month]) {
+			inputError(obj, "Day error.");
+			return false;
+		}else if (((year % 400 != 0 && year % 100 == 0) || (year % 4 != 0)) && month == 2 && day == 29) {
+			inputError(obj, "Date error.");
+			return false;
+		}
+		var thedate = new Date(year, month - 1, day)
+//		alert(thedate);
+		if (year > (new Date()).getFullYear() + 5)
+		{
+			inputError(obj, "日期超前");
+			return false;
+		}
+	}
+	return true;
+}
+
+function checkEmail(obj)
+{
+	var pattern = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+	if (obj && obj.value && !pattern.test(obj.value))
+	{
+		inputError(obj, "E-mail format incorrect, please fill it correctly.");
+		return false;
+	}
+	return true;
+}
+
+function checkInput(obj)
+{
+	if (obj && obj.value == "")
+	{
+		inputError(obj, "This field is empty, please fill it.");
+		return false;
+	}
+	return true;
+}
+
+function checkForm()
+{
+	var teamcn = document.getElementById("teamcn");
+	var teamen = document.getElementById("teamen");
+	var dates = ["admitdate", "graduatedate", "birthday"];
+	if (!checkInput(teamen) || !checkInput(teamcn))
+		return false;
+	if (!checkLen(teamcn, 50) || !checkLen(teamen, 50)) {
+		alert("Team name must not be longer than 50 characters.");
+	}
+	var fields = ["firstname", "lastname", "cnname", "email", "confirmemail", "phone", 
+		"institution", "location", "country", "majorcn", "admitdate", "graduatedate", "birthday",
+		"grade"];
+	var numbers = ["phone", "grade"];
+	for (i = 1; i <= 3; i++)
+	{
+//		alert(i);
+		for (j = 0; j < fields.length; j++)
+		{
+			var id = fields[j] + i;
+			obj = document.getElementById(id);
+			if (!checkInput(obj))
+				return false;
+			if (fields[j]=="email" && !checkEmail(obj))
+				return false;
+		}
+		for (j = 0; j < numbers.length; j++)
+		{
+			var id = numbers[j] + i;
+			obj = document.getElementById(id);
+			if (!checkNumber(obj))
+				return false;
+		}
+		for (j = 0; j < dates.length; j++)
+		{
+			var id = dates[j] + i;
+			obj = document.getElementById(id);
+			if (!checkDate(obj))
+				return false;
+		}
+	}
+	return true;
+}
+window.load = setFields;
+
+</script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+-->
+</style>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="setFields();">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td><? require("navigation.php");?></td>
+		<td background="../images/navigation_bg.gif">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="770"><table width="770" border="0" cellspacing="0" cellpadding="0">
+				<tr bgcolor="#f0f0f0">
+					<td width="150" height="100"></td>
+					<td width="470" rowspan="3" align="center" valign="top" bgcolor="white"><br>
+						<form action="re_reg.php<?php if ($_GET['mode']=='debug') print "?mode=debug";?>" method="post" onSubmit="return checkForm();">
+							<table border="0" cellpadding="4" cellspacing="2" class="reg">
+								<tr>
+									<td colspan="2" class="title">ZSUCPC2009 Register Form</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Team name (Engligh)</td>
+									<td><input name="teamen" id="teamen" value="<?php print $_SESSION["teamen"]?>" size="50" maxlength="50">
+									<br>no longer than 50 characters</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Team name (Chinese)</td>
+									<td><input name="teamcn" id="teamcn" value="<?php print $_SESSION["teamcn"]?>" size="50" maxlength="50">
+									<br>no longer than 50 characters
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="title">The First Contestant (Team Leader) </td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Title</td>
+									<td><select name="title1" size="1" id="title1">
+											<option value="none">none</option>
+											<option value="Dr.">Dr.</option>
+											<option value="Ir.">Ir.</option>
+											<option value="Miss">Miss</option>
+											<option selected="selected" value="Mr.">Mr.</option>
+											<option value="Mrs.">Mrs.</option>
+											<option value="Ms.">Ms.</option>
+											<option value="Professor">Professor</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">First Name</td>
+									<td><input name="firstname1" type="text" id="firstname1" size="20" maxlength="20">
+										<br />
+										enter English first name (<span class="STYLE1">given name</span>) </td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Last Name</td>
+									<td><input name="lastname1" type="text" id="lastname1" size="20" maxlength="20">
+										<br />
+										enter English last name (<span class="STYLE1">family name</span>) </td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Chinese Name</td>
+									<td><input name="cnname1" type="text" id="cnname1" size="20" maxlength="20">
+									</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Gender</td>
+									<td><input name="gender1" type="radio" id="sex1male" size="30" maxlength="50" class="radio" value="0" checked="checked" /><label for="sex1male">Male</label>
+&nbsp; &nbsp; &nbsp;
+										<input name="gender1" type="radio" class="radio" id="sex1female" value="1" size="30" maxlength="50"><label for="sex1female">Female</label>
+									</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Email Address</td>
+									<td><input name="email1" type="text" id="email1" value="" size="50" maxlength="50">
+									</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Telephone</td>
+									<td><input name="phone1" type="text" id="phone1" size="20" maxlength="20">
+									</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">T-Shirt Size</td>
+									<td><input name="tshirt1" type="radio" value="S" id="tshirt1S" /><label for="tshirt1S">S</label>
+										<input name="tshirt1" type="radio" value="M" id="tshirt1M" /><label for="tshirt1M">M</label>
+										<input name="tshirt1" type="radio" value="L" id="tshirt1L" /><label for="tshirt1L">L</label>
+										<input name="tshirt1" type="radio" value="XL" id="tshirt1XL" checked="checked" /><label for="tshirt1XL">XL</label>
+										<input name="tshirt1" type="radio" value="XXL" id="tshirt1XXL" /><label for="tshirt1XXL">XXL</label>
+										<input name="tshirt1" type="radio" value="3XL" id="tshirt13XL" /><label for="tshirt13XL">3XL</label>
+									</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">University</td>
+									<td><input name="institution1" type="text" id="institution1" value="Zhongshan(Sun Yat-sen) University" size="50" maxlength="50" />
+									</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Address</td>
+									<td><input name="location1" type="text" id="location1" value="Guangzhou, Guangdong" size="30" maxlength="30" />
+										<br>
+										City, Province </td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Country</td>
+									<td><input name="country1" type="text" id="country1" value="CHN" size="3" maxlength="3" /></td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Degree Pursued</td>
+									<td><select size="1" name="degree1" id="degree1">
+											<option value="B.S.E.E.">B.S.E.E.</option>
+											<option value="B.Sc.(Honors)">B.Sc.(Honors)</option>
+											<option value="Unknown">Unknown</option>
+											<option value="Ir.D.">Ir.D.</option>
+											<option value="M.S.">M.S.</option>
+											<option value="B.B.A">B.B.A</option>
+											<option value="M.A.">M.A.</option>
+											<option value="Graduate Degree">Graduate Degree</option>
+											<option value="Ph.D.">Ph.D.</option>
+											<option value="BS+MS (before last year)">BS+MS (before last year)</option>
+											<option value="B.S.E">B.S.E</option>
+											<option value="BA+MA (last year)">BA+MA (last year)</option>
+											<option value="B.Math">B.Math</option>
+											<option value="B.S.C.S.">B.S.C.S.</option>
+											<option value="BA+MA (before last year)">BA+MA (before last year)</option>
+											<option value="B.A.(Honors)">B.A.(Honors)</option>
+											<option value="B.S.C.S.E">B.S.C.S.E</option>
+											<option value="B.Sc.">B.Sc.</option>
+											<option value="BS+MS (last year)">BS+MS (last year)</option>
+											<option value="B.A.">B.A.</option>
+											<option value="Undergraduate Degree">Undergraduate Degree</option>
+											<option selected="selected" value="B.S.">B.S.</option>
+											<option value="M.Math">M.Math</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Major</td>
+									<td><select size="1" name="major1" id="major1">
+											<option value="none">Other</option>
+											<option value="Computer Engineering">Computer Engineering</option>
+											<option value="Mathematics">Mathematics</option>
+											<option value="Electrical Engineering">Electrical Engineering</option>
+											<option value="Physics">Physics</option>
+											<option value="Business">Business</option>
+											<option value="Other">Other</option>
+											<option value="Information Systems">Information Systems</option>
+											<option selected="selected" value="Computer Science">Computer Science</option>
+											<option value="Informatics">Informatics</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Major (Chinese)</td>
+									<td><input name="majorcn1" type="text" id="majorcn1" size="50" maxlength="50">
+									</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Grade</td>
+									<td><select name="grade1" id="grade1"  size="1" >
+									<? for ($i = 2005; $i <= 2008; $i = $i + 1) {?>
+									    <option value="<?echo $i?>"><?echo $i?></option>
+									<?}?></select>
+									The year you enter university. </td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Class</td>
+									<td><input name="class1" id="class1" size="10" maxlength="10"></td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Began Degree</td>
+									<td><input name="admitdate1" id="admitdate1" size="10" maxlength="10">
+										yyyy-mm-dd<br />
+										The first day of the first term you first began pursuing your first degree from any institution of higher education. </td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Expected Date of Graduation</td>
+									<td><input name="graduatedate1" type="text" id="graduatedate1" size="10" maxlength="10">
+										yyyy-mm-dd </td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Birthday</td>
+									<td><input name="birthday1" type="text" id="birthday1" size="10" maxlength="10">
+										yyyy-mm-dd</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="title">The Second Contestant</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Title</td>
+									<td><select name="title2" size="1" id="title2">
+											<option value="none">none</option>
+											<option value="Dr.">Dr.</option>
+											<option value="Ir.">Ir.</option>
+											<option value="Miss">Miss</option>
+											<option selected="selected" value="Mr.">Mr.</option>
+											<option value="Mrs.">Mrs.</option>
+											<option value="Ms.">Ms.</option>
+											<option value="Professor">Professor</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">First Name</td>
+									<td><input name="firstname2" type="text" id="firstname2" size="20" maxlength="20">
+										<br />
+										enter English first name (<span class="STYLE1">given name</span>) </td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Last Name</td>
+									<td><input name="lastname2" type="text" id="lastname2" size="20" maxlength="20">
+										<br />
+										enter English last name (<span class="STYLE1">family name</span>)</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Chinese Name</td>
+									<td><input name="cnname2" type="text" id="cnname2" size="20" maxlength="20">
+									</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Gender</td>
+									<td><input name="gender2" type="radio" id="sex2male" size="30" maxlength="50" class="radio" value="0" checked="checked" /><label for="sex2male">Male</label>&nbsp; &nbsp; &nbsp;
+										<input name="gender2" type="radio" class="radio" id="sex2female" value="1" size="30" maxlength="50"><label for="sex2female">Female</label>
+									</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Email Address</td>
+									<td><input name="email2" type="text" id="email2" value="" size="50" maxlength="50">
+									</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Telephone</td>
+									<td><input name="phone2" type="text" id="phone2" size="20" maxlength="20">
+									</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">T-Shirt Size</td>
+									<td><input name="tshirt2" value="S" type="radio" id="tshirt2S" /><label for="tshirt2S">S</label>
+										<input name="tshirt2" value="M" type="radio" id="tshirt2M" /><label for="tshirt2M">M</label>
+										<input name="tshirt2" value="L" type="radio" id="tshirt2L" /><label for="tshirt2L">L</label>
+										<input name="tshirt2" value="XL" type="radio" id="tshirt2XL" checked="checked" /><label for="tshirt2XL">XL</label>
+										<input name="tshirt2" value="XXL" type="radio" id="tshirt2XXL" /><label for="tshirt2XXL">XXL</label>
+										<input name="tshirt2" value="3XL" type="radio" id="tshirt23XL" /><label for="tshirt23XL">3XL</label>
+									</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">University</td>
+									<td><input name="institution2" type="text" id="institution2" value="Zhongshan(Sun Yat-sen) University" size="50" maxlength="50" />
+									</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Address</td>
+									<td><input name="location2" type="text" id="location2" value="Guangzhou, Guangdong" size="30" maxlength="30" />
+										<br>
+										City, Province </td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Country</td>
+									<td><input name="country2" type="text" id="country2" value="CHN" size="3" maxlength="3" /></td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Degree Pursued</td>
+									<td><select size="1" name="degree2" id="degree2">
+											<option value="B.S.E.E.">B.S.E.E.</option>
+											<option value="B.Sc.(Honors)">B.Sc.(Honors)</option>
+											<option value="Unknown">Unknown</option>
+											<option value="Ir.D.">Ir.D.</option>
+											<option value="M.S.">M.S.</option>
+											<option value="B.B.A">B.B.A</option>
+											<option value="M.A.">M.A.</option>
+											<option value="Graduate Degree">Graduate Degree</option>
+											<option value="Ph.D.">Ph.D.</option>
+											<option value="BS+MS (before last year)">BS+MS (before last year)</option>
+											<option value="B.S.E">B.S.E</option>
+											<option value="BA+MA (last year)">BA+MA (last year)</option>
+											<option value="B.Math">B.Math</option>
+											<option value="B.S.C.S.">B.S.C.S.</option>
+											<option value="BA+MA (before last year)">BA+MA (before last year)</option>
+											<option value="B.A.(Honors)">B.A.(Honors)</option>
+											<option value="B.S.C.S.E">B.S.C.S.E</option>
+											<option value="B.Sc.">B.Sc.</option>
+											<option value="BS+MS (last year)">BS+MS (last year)</option>
+											<option value="B.A.">B.A.</option>
+											<option value="Undergraduate Degree">Undergraduate Degree</option>
+											<option selected="selected" value="B.S.">B.S.</option>
+											<option value="M.Math">M.Math</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Major</td>
+									<td><select size="1" name="major2" id="major2">
+											<option value="none">Other</option>
+											<option value="Computer Engineering">Computer Engineering</option>
+											<option value="Mathematics">Mathematics</option>
+											<option value="Electrical Engineering">Electrical Engineering</option>
+											<option value="Physics">Physics</option>
+											<option value="Business">Business</option>
+											<option value="Other">Other</option>
+											<option value="Information Systems">Information Systems</option>
+											<option selected="selected" value="Computer Science">Computer Science</option>
+											<option value="Informatics">Informatics</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Major (Chinese)</td>
+									<td><input name="majorcn2" type="text" id="majorcn2" size="50" maxlength="50">
+									</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Grade</td>
+									<td><select name="grade2" id="grade2"  size="1" >
+                                                                        <? for ($i = 2005; $i <= 2008; $i = $i + 1) {?>
+									<option value="<?echo $i?>"><?echo $i?></opti    on>
+									<?}?></select></td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Class</td>
+									<td><input name="class2" id="class2" size="10" maxlength="10"></td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Began Degree</td>
+									<td><input name="admitdate2" id="admitdate2" size="20" maxlength="20">
+										yyyy-mm-dd<br />
+										The first day of the first term you first began pursuing your first degree from any institution of higher education. </td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Expected Date of Graduation</td>
+									<td><input name="graduatedate2" type="text" id="graduatedate2" size="20" maxlength="20">
+										yyyy-mm-dd </td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Birthday</td>
+									<td><input name="birthday2" type="text" id="birthday2" size="20" maxlength="20">
+										yyyy-mm-dd</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="title">The Third Contestant </td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Title</td>
+									<td><select name="title3" size="1" id="title3">
+											<option value="none">none</option>
+											<option value="Dr.">Dr.</option>
+											<option value="Ir.">Ir.</option>
+											<option value="Miss">Miss</option>
+											<option selected="selected" value="Mr.">Mr.</option>
+											<option value="Mrs.">Mrs.</option>
+											<option value="Ms.">Ms.</option>
+											<option value="Professor">Professor</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">First Name</td>
+									<td><input name="firstname3" type="text" id="firstname3" size="10" maxlength="10">
+										<br />
+										enter English first name (<span class="STYLE1">given name</span>) </td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Last Name</td>
+									<td><input name="lastname3" type="text" id="lastname3" size="10" maxlength="10">
+										<br />
+										enter English last name (<span class="STYLE1">family name</span>)</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Chinese Name</td>
+									<td><input name="cnname3" type="text" id="cnname3" size="10" maxlength="10">
+									</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Gender</td>
+									<td><input name="gender3" type="radio" id="sex3male" size="30" maxlength="50" class="radio" value="0" checked="checked" /><label for="sex3male">Male</label>&nbsp; &nbsp; &nbsp;
+										<input name="gender3" type="radio" class="radio" id="sex3female" value="1" size="30" maxlength="50"><label for="sex3female">Female</label>
+									</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Email Address</td>
+									<td><input name="email3" type="text" id="email3" value="" size="50" maxlength="50">
+									</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Telephone</td>
+									<td><input name="phone3" type="text" id="phone3" size="20" maxlength="20">
+									</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">T-Shirt Size</td>
+									<td><input name="tshirt3" value="S" type="radio" id="tshirt3S" /><label for="tshirt3S">S</label>
+										<input name="tshirt3" value="M" type="radio" id="tshirt3M" /><label for="tshirt3M">M</label>
+										<input name="tshirt3" value="L" type="radio" id="tshirt3L" /><label for="tshirt3L">L</label>
+										<input name="tshirt3" value="XL" type="radio" id="tshirt3XL" checked="checked" /><label for="tshirt3XL">XL</label>
+										<input name="tshirt3" value="XXL" type="radio" id="tshirt3XXL" /><label for="tshirt3XXL">XXL</label>
+										<input name="tshirt3" value="3XL" type="radio" id="tshirt33XL" /><label for="tshirt33XL">3XL</label>
+									</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">University</td>
+									<td><input name="institution3" type="text" id="institution3" value="Zhongshan(Sun Yat-sen) University" size="50" maxlength="50" />
+									</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Address</td>
+									<td><input name="location3" type="text" id="location3" value="Guangzhou, Guangdong" size="30" maxlength="30" />
+										<br>
+										City, Province </td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Country</td>
+									<td><input name="country3" type="text" id="country3" value="CHN" size="3" maxlength="3" /></td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Degree Pursued</td>
+									<td><select size="1" name="degree3" id="degree3">
+											<option value="B.S.E.E.">B.S.E.E.</option>
+											<option value="B.Sc.(Honors)">B.Sc.(Honors)</option>
+											<option value="Unknown">Unknown</option>
+											<option value="Ir.D.">Ir.D.</option>
+											<option value="M.S.">M.S.</option>
+											<option value="B.B.A">B.B.A</option>
+											<option value="M.A.">M.A.</option>
+											<option value="Graduate Degree">Graduate Degree</option>
+											<option value="Ph.D.">Ph.D.</option>
+											<option value="BS+MS (before last year)">BS+MS (before last year)</option>
+											<option value="B.S.E">B.S.E</option>
+											<option value="BA+MA (last year)">BA+MA (last year)</option>
+											<option value="B.Math">B.Math</option>
+											<option value="B.S.C.S.">B.S.C.S.</option>
+											<option value="BA+MA (before last year)">BA+MA (before last year)</option>
+											<option value="B.A.(Honors)">B.A.(Honors)</option>
+											<option value="B.S.C.S.E">B.S.C.S.E</option>
+											<option value="B.Sc.">B.Sc.</option>
+											<option value="BS+MS (last year)">BS+MS (last year)</option>
+											<option value="B.A.">B.A.</option>
+											<option value="Undergraduate Degree">Undergraduate Degree</option>
+											<option selected="selected" value="B.S.">B.S.</option>
+											<option value="M.Math">M.Math</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Major</td>
+									<td><select size="1" name="major3" id="major3">
+											<option value="none">Other</option>
+											<option value="Computer Engineering">Computer Engineering</option>
+											<option value="Mathematics">Mathematics</option>
+											<option value="Electrical Engineering">Electrical Engineering</option>
+											<option value="Physics">Physics</option>
+											<option value="Business">Business</option>
+											<option value="Other">Other</option>
+											<option value="Information Systems">Information Systems</option>
+											<option selected="selected" value="Computer Science">Computer Science</option>
+											<option value="Informatics">Informatics</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Major (Chinese)</td>
+									<td><input name="majorcn3" type="text" id="majorcn3" size="50" maxlength="50">
+									</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Grade</td>
+									<td><select name="grade3" id="grade3"  size="1">
+                                                                        <? for ($i = 2005; $i <= 2008; $i = $i + 1) {?>
+                                                                        <option value="<?echo $i?>"><?echo $i?></opti    on>
+                                                                        <?}?>
+									</select></td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Class</td>
+									<td><input name="class3" id="class3" size="10" maxlength="10"></td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Began Degree</td>
+									<td><input name="admitdate3" id="admitdate3" size="10" maxlength="10">
+										yyyy-mm-dd<br />
+										The first day of the first term you first began pursuing your first degree from any institution of higher education. </td>
+								</tr>
+								<tr class="color2">
+									<td class="fieldname">Expected Date of Graduation</td>
+									<td><input name="graduatedate3" type="text" id="graduatedate3" size="10" maxlength="10">
+										yyyy-mm-dd</td>
+								</tr>
+								<tr class="color1">
+									<td class="fieldname">Birthday</td>
+									<td><input name="birthday3" type="text" id="birthday3" size="10" maxlength="10">
+										yyyy-mm-dd</td>
+								</tr>
+								<tr align="center">
+									<td colspan="2"><input name="submit" type="submit" id="temp" value="Register">
+									</td>
+								</tr>
+							</table>
+						</form></td>
+					<td width="150" height="100"></td>
+				</tr>
+			</table></td>
+		<td></td>
+	</tr>
+	<?
+  require("footer.php");
+?>
+</table>
+</body>
+</html>
